@@ -2,12 +2,25 @@
 
 https://bitbucket.org/whitewand/2su_2020/src
 
-## Résolution crack emily
+## Questions
 
-### Problème initial
+- Quels sont les chemins d'attaque possibles sur la signature d'un système embarqué?
+
+
+- A quoi sert la chaine de confiance? Pourquoi est-elle nécessaire?
+- Décrire la méthode pour aborder la sécurité sur un produit embarqué. Pourquoi établir un modèle d'attaquant est-il important?
+- Trouver un moyen rapide de faire du debug embarqué (par exemple sur cible ARM)? Expliquer les avantages
+- Lister les catégories de bug possibles et comment les exploiter et les défendre
+- Quelles idées pour améliorer la sécurité en embarqué? (IA, Anti-debug, Obfuscation, Crypto ...) Choisissez une idée, chercher si elle existe et développer en quelques phrases quel avantage elle apporte et ses limites
+
+## TD1: \[Reverse engineering\]
+
+### Finir crack emily (version avec soluce)
+
+#### Problème initial
 Nous avons un fichier gentle.c, qui permet de rentrer une chaîne de caractères et de vérifier si celle-ci correspond à la chaîne donnée dans le programe (en gros, on cherche un mot de passe).
 
-### Utilisation de Ghidra
+#### Utilisation de Ghidra
 
 A partir de Ghidra, on va utiliser l'outil d'analyse afin de trouver rapidement le fonctionnement du programme et la méthode afin d'éditer le binaire.
 
