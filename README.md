@@ -4,14 +4,25 @@ https://bitbucket.org/whitewand/2su_2020/src
 
 ## Questions
 
-- Quels sont les chemins d'attaque possibles sur la signature d'un système embarqué?
+>Quels sont les chemins d'attaque possibles sur la signature d'un système embarqué?
 
+Physique direct en remplaçant sa signature sur les systèmes
+Man in the middle ?
 
-- A quoi sert la chaine de confiance? Pourquoi est-elle nécessaire?
-- Décrire la méthode pour aborder la sécurité sur un produit embarqué. Pourquoi établir un modèle d'attaquant est-il important?
-- Trouver un moyen rapide de faire du debug embarqué (par exemple sur cible ARM)? Expliquer les avantages
-- Lister les catégories de bug possibles et comment les exploiter et les défendre
-- Quelles idées pour améliorer la sécurité en embarqué? (IA, Anti-debug, Obfuscation, Crypto ...) Choisissez une idée, chercher si elle existe et développer en quelques phrases quel avantage elle apporte et ses limites
+> A quoi sert la chaine de confiance? Pourquoi est-elle nécessaire?
+
+Savoir par où passe les informations, nécessaire pour savoir à quel endroit il faut mettre des contrôles/sécurités
+
+> Décrire la méthode pour aborder la sécurité sur un produit embarqué. Pourquoi établir un modèle d'attaquant est-il important?
+
+Contre qui ? Définir l'objet attaqué, les méthodes de défense
+Il faut savoir qui nous attaque pour proposer une défense adaptée
+
+> Trouver un moyen rapide de faire du debug embarqué (par exemple sur cible ARM)? Expliquer les avantages
+
+> Lister les catégories de bug possibles et comment les exploiter et les défendre
+
+> Quelles idées pour améliorer la sécurité en embarqué? (IA, Anti-debug, Obfuscation, Crypto ...) Choisissez une idée, chercher si elle existe et développer en quelques phrases quel avantage elle apporte et ses limites
 
 ## TD1: \[Reverse engineering\]
 
