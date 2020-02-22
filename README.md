@@ -56,3 +56,13 @@ La fonction en question est toute simple, elle compare la chaîne rentrée en pa
 Pour finir, on enregistre le nouveau binaire (*gentle.bin*) et on observe le résultat !
 
 ![alt text](img/Capture&#32;du&#32;2020-01-28&#32;16-36-46.png)
+
+
+## TD9 [Crypto]
+On va signer notre fichier src/gentle.c
+
+Passphrase de la clé privée : Hello
+
+La signature peut protéger dans un contexte embarqué dans le sens où il est possible de comparer le hash d'un programme via la clé publique de la personne qui a signé le programme. Ainsi, on peut savoir si un programme a été modifié via la signature. 
+
+Concernant l'update d'un firmware, on peut par exemple signer l'update afin de garantir que l'on n'installe pas une update malveillante lors de son téléchargement par exemple.
