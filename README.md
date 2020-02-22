@@ -6,23 +6,45 @@ https://bitbucket.org/whitewand/2su_2020/src
 
 >Quels sont les chemins d'attaque possibles sur la signature d'un système embarqué?
 
-Physique direct en remplaçant sa signature sur les systèmes
-Man in the middle ?
+Les chemins les plus "rapides" pour attaquer la signature d'un système embarqué est de faire une intrusion physique sur le système afin de changer manuellement la signature stockée à l'intérieur. On peut ainsi par exemple remplacer la signature fiable par la signature de l'attaquant.
 
 > A quoi sert la chaine de confiance? Pourquoi est-elle nécessaire?
 
-Savoir par où passe les informations, nécessaire pour savoir à quel endroit il faut mettre des contrôles/sécurités
+La chaîne de confiance sert à savoir par où passe les informations. Elle est nécessaire pour connaître à quels endroits il faut placer des contrôles/sécurités.
 
 > Décrire la méthode pour aborder la sécurité sur un produit embarqué. Pourquoi établir un modèle d'attaquant est-il important?
 
-Contre qui ? Définir l'objet attaqué, les méthodes de défense
-Il faut savoir qui nous attaque pour proposer une défense adaptée
+Pour aborder la sécurité d'un système embarqué, on va d'abord définir contre qui on se bat, puis les caractéristiques du produit mises en jeu et les méthodes de défense possibles.
+Il faut savoir qui nous attaque pour proposer une défense adaptée en fonction (il ne faudrait pas placer une défense énorme au détriment des performances si cela n'est pas nécessaire).
 
 > Trouver un moyen rapide de faire du debug embarqué (par exemple sur cible ARM)? Expliquer les avantages
 
+Un moyen rapide de faire du debug embarqué est de définir au préalable un plan de validation avec des tests unitaires. De ce fait, les tests sont automatisés et la conception du plan avant l'implémentation du code fait qu'on ne se focalise pas sur celui-ci pour réaliser les tests.
+
 > Lister les catégories de bug possibles et comment les exploiter et les défendre
 
+Bugs : 
+- Stack buffer overflow
+- Return Oriented Programming
+- Use after free
+- Signedness error example
+- Use uninitialized
+- Format string
+
+Exploitation :
+- Remplissage de la pile pour aller sur des adresses qui ne sont pas accessibles normalement
+- Utilisation d'un programme en parallèle pour modifier certaines valeurs après la vérification du programme ou si la valeur n'est pas initialisée
+
+Défense :
+- Niveau hardware
+- Sur l'architecture
+- Options de compilation
+
 > Quelles idées pour améliorer la sécurité en embarqué? (IA, Anti-debug, Obfuscation, Crypto ...) Choisissez une idée, chercher si elle existe et développer en quelques phrases quel avantage elle apporte et ses limites
+
+-> Utilisation de l'IA pour l'amélioration de la sécurité.
+
+L'utilisation de l'IA est déjà un principe utilisé pour l'amélioration de la sécurité, par exemple dans les firewalls. Grâce à l'apprentissage de l'IA, on peut adapter un moyen de défense avec les attaques passées, on peut également "prévoir" de potentielles attaques. Le problème de cette méthode est qu'il faut une base de données d'attaques au départ, en plus du fait qu'il est difficile de porter ça directement sur de l'embarqué car il faut généralement des machines assez puissantes pour faire tourner l'IA. L'idée serait de mettre l'IA sur une machine distante et d'envoyer les mises à jour de sécurité via le réseau. 
 
 ## TD1: \[Reverse engineering\]
 
